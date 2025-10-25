@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>    
+    <form action="">
+    <br> Digite uma nota válida entre 0 e 10. <br />
+    <input type="number" id="primeira" name="primeira" />
+    <br /><button type="button" onclick="calcular()"> Calcular </button>
+</form>
+<div id="resposta"></div>
+<script>
+    function calcular() {
+        let n;
+        let resposta = document.getElementById("resposta");
+        do{
+            let n = parseFloat(document.getElementById("primeira").value);
+            if(isNaN(n) || n < 0 || n > 10){
+                resposta.innerHTML = "Erro: Digite uma nota válida entre 0 e 10.";              
+            }else{
+                resposta.innerHTML = "valor correto";                
+            }
+        }while(false);
+    }
+</script>
+    <script>
+        //1.Faça um programa que peça uma nota, entre zero e dez. 
+        // Mostre uma mensagem caso o valor seja inválido e continue pedindo até que o usuário informe um valor válido.
+
+    </script>
+</body>
+</html>
